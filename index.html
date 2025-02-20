@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Recovery Plan Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Disaster Recovery Plan Input Portal</h1>
+            <p>Provide valuable information to help ensure the resilience of our applications during a disaster recovery event.</p>
+        </header>
+
+        <main>
+            <h2>Select an Application</h2>
+            <form id="app-selection-form">
+                <select id="applicationDropdown">
+                    <option value="" disabled selected>Select your application</option>
+                    <!-- Options will be added dynamically by JavaScript -->
+                </select>
+                <button type="submit" id="submitBtn">Proceed to Form</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
