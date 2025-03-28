@@ -12,15 +12,89 @@
     <p>Application Selected: <span id="selectedAppName"></span></p>
 
     <form id="dr-input-form">
-        <!-- Input fields for disaster recovery details -->
-        <label for="recoveryPlan">Recovery Plan:</label><br>
-        <textarea id="recoveryPlan" name="recoveryPlan" rows="4" cols="50" placeholder="Enter recovery plan details..."></textarea><br><br>
+        <!-- 1. Other Enterprise IT Teams -->
+        <fieldset>
+            <legend>Select other Enterprise IT Teams:</legend>
+            <label><input type="checkbox" name="teams" value="Windows"> Windows</label><br>
+            <label><input type="checkbox" name="teams" value="UNIX"> UNIX</label><br>
+            <label><input type="checkbox" name="teams" value="Workstation"> Workstation</label><br>
+            <label><input type="checkbox" name="teams" value="Network"> Network</label><br>
+            <label><input type="checkbox" name="teams" value="Telecom"> Telecom</label><br>
+            <label><input type="checkbox" name="teams" value="Secure Engineering"> Secure Engineering</label><br>
+            <label><input type="checkbox" name="teams" value="Other" id="teams-other"> Other</label><br>
+            <input type="text" id="teams-other-input" name="teamsOther" placeholder="Please specify..." style="display:none;">
+        </fieldset>
 
-        <label for="backupDetails">Backup Details:</label><br>
-        <textarea id="backupDetails" name="backupDetails" rows="4" cols="50" placeholder="Enter backup details..."></textarea><br><br>
+        <!-- 2. Technology: Server/Infrastructure Hardware -->
+        <fieldset>
+            <legend>Select Technology:</legend>
+            <label><input type="checkbox" name="technology" value="Virtual"> Virtual</label><br>
+            <label><input type="checkbox" name="technology" value="Physical/PC Server"> Physical/PC Server</label><br>
+            <label><input type="checkbox" name="technology" value="Cloud/Azure"> Cloud/Azure resource</label><br>
+            <label><input type="checkbox" name="technology" value="GitHub processes"> GitHub processes</label><br>
+            <label><input type="checkbox" name="technology" value="Other" id="technology-other"> Other</label><br>
+            <input type="text" id="technology-other-input" name="technologyOther" placeholder="Please specify..." style="display:none;">
+        </fieldset>
 
-        <label for="contactInfo">Contact Information:</label><br>
-        <textarea id="contactInfo" name="contactInfo" rows="4" cols="50" placeholder="Enter contact info..."></textarea><br><br>
+        <!-- 3. Recovery Method -->
+        <fieldset>
+            <legend>Recovery Method:</legend>
+            <label><input type="radio" name="recovery-method" value="Automatic Recovery Process"> Automatic Recovery Process</label><br>
+            <label><input type="radio" name="recovery-method" value="no Manual Intervention Required"> No Manual Intervention Required</label><br>
+            <label><input type="radio" name="recovery-method" value="Automated Process but Manual Intervention Required"> Automated Process but Manual Intervention Required</label>
+        </fieldset>
+
+        <!-- 4. Replication/Backup Interval/Frequency -->
+        <fieldset>
+            <legend>Replication/Backup Interval/Frequency:</legend>
+            <label><input type="radio" name="backup-frequency" value="Always occurring"> Always occurring</label><br>
+            <label><input type="radio" name="backup-frequency" value="Server backups occur nightly"> Server backups occur nightly</label><br>
+            <label><input type="radio" name="backup-frequency" value="Other" id="backup-frequency-other"> Other</label><br>
+            <input type="text" id="backup-frequency-other-input" name="backupFrequencyOther" placeholder="Please specify..." style="display:none;">
+        </fieldset>
+
+        <!-- 5. Replication/Data Recovery -->
+        <fieldset>
+            <legend>Replication/Data Recovery:</legend>
+            <label><input type="radio" name="replication" value="Oracle replication to Exadata through Data Guard available instantly"> Oracle replication to Exadata through Data Guard available instantly</label><br>
+            <label><input type="radio" name="replication" value="SQL Always ON Failover"> SQL Always ON Failover</label><br>
+            <label><input type="radio" name="replication" value="Snapshot"> Snapshot</label><br>
+            <label><input type="radio" name="replication" value="Other" id="replication-other"> Other</label><br>
+            <input type="text" id="replication-other-input" name="replicationOther" placeholder="Please specify..." style="display:none;">
+        </fieldset>
+
+        <!-- 6. Database Language -->
+        <fieldset>
+            <legend>Database Language:</legend>
+            <label><input type="radio" name="database-language" value="Oracle"> Oracle</label><br>
+            <label><input type="radio" name="database-language" value="SQL"> SQL</label><br>
+            <label><input type="radio" name="database-language" value="Other" id="database-language-other"> Other</label><br>
+            <input type="text" id="database-language-other-input" name="databaseLanguageOther" placeholder="Please specify..." style="display:none;">
+        </fieldset>
+
+        <!-- 7. Database User Account Information -->
+        <fieldset>
+            <legend>Database User Account Information:</legend>
+            <input type="text" name="db-user-account" placeholder="Enter database user account information...">
+        </fieldset>
+
+        <!-- 8. Dependencies: Applications This Depends On -->
+        <fieldset>
+            <legend>Dependencies: This application DEPENDS UPON the following applications:</legend>
+            <input type="text" name="dependencies-on" placeholder="Enter dependencies on other applications...">
+        </fieldset>
+
+        <!-- 9. Dependencies: Applications That Are Input To -->
+        <fieldset>
+            <legend>Dependencies: This application is an INPUT TO the following applications:</legend>
+            <input type="text" name="dependencies-input" placeholder="Enter applications impacted by downtime...">
+        </fieldset>
+
+        <!-- 10. Recovery Sequence -->
+        <fieldset>
+            <legend>Recovery Sequence:</legend>
+            <input type="text" name="recovery-sequence" placeholder="Enter recovery sequence for this application...">
+        </fieldset>
 
         <button type="submit">Submit</button>
     </form>
