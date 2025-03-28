@@ -17,7 +17,7 @@ document.getElementById('app-selection-form').addEventListener('submit', functio
     const selectedApp = appDropdown.value;
     if (selectedApp) {
         alert(`You selected: ${selectedApp}`);
-        // Redirect or load next page/form as needed
+        window.location.href = `form.html?app=${selectedApp}`;// Redirect or load next page/form as needed
         // For example: window.location.href = `/form.html?app=${selectedApp}`;
     } else {
         alert("Please select an application.");
