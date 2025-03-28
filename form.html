@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Recovery Input Form</title>
+</head>
+<body>
+    <h1>Enter Disaster Recovery Information</h1>
+
+    <!-- Display the selected application name -->
+    <p>Application Selected: <span id="selectedAppName"></span></p>
+
+    <form id="dr-input-form">
+        <!-- Input fields for disaster recovery details -->
+        <label for="recoveryPlan">Recovery Plan:</label><br>
+        <textarea id="recoveryPlan" name="recoveryPlan" rows="4" cols="50" placeholder="Enter recovery plan details..."></textarea><br><br>
+
+        <label for="backupDetails">Backup Details:</label><br>
+        <textarea id="backupDetails" name="backupDetails" rows="4" cols="50" placeholder="Enter backup details..."></textarea><br><br>
+
+        <label for="contactInfo">Contact Information:</label><br>
+        <textarea id="contactInfo" name="contactInfo" rows="4" cols="50" placeholder="Enter contact info..."></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="form.js"></script>
+</body>
+</html>
