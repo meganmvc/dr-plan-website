@@ -39,36 +39,36 @@
         <!-- 3. Recovery Method -->
         <fieldset>
             <legend>Recovery Method:</legend>
-            <label><input type="radio" name="recovery-method" value="Automatic Recovery Process"> Automatic Recovery Process</label><br>
-            <label><input type="radio" name="recovery-method" value="no Manual Intervention Required"> No Manual Intervention Required</label><br>
-            <label><input type="radio" name="recovery-method" value="Automated Process but Manual Intervention Required"> Automated Process but Manual Intervention Required</label>
+            <label><input type="checkbox" name="recovery-method" value="Automatic Recovery Process"> Automatic Recovery Process</label><br>
+            <label><input type="checkbox" name="recovery-method" value="no Manual Intervention Required"> No Manual Intervention Required</label><br>
+            <label><input type="checkbox" name="recovery-method" value="Automated Process but Manual Intervention Required"> Automated Process but Manual Intervention Required</label>
         </fieldset>
 
         <!-- 4. Replication/Backup Interval/Frequency -->
         <fieldset>
             <legend>Replication/Backup Interval/Frequency:</legend>
-            <label><input type="radio" name="backup-frequency" value="Always occurring"> Always occurring</label><br>
-            <label><input type="radio" name="backup-frequency" value="Server backups occur nightly"> Server backups occur nightly</label><br>
-            <label><input type="radio" name="backup-frequency" value="Other" id="backup-frequency-other"> Other</label><br>
+            <label><input type="checkbox" name="backup-frequency" value="Always occurring"> Always occurring</label><br>
+            <label><input type="checkbox" name="backup-frequency" value="Server backups occur nightly"> Server backups occur nightly</label><br>
+            <label><input type="checkbox" name="backup-frequency" value="Other" id="backup-frequency-other"> Other</label><br>
             <input type="text" id="backup-frequency-other-input" name="backupFrequencyOther" placeholder="Please specify..." style="display:none;">
         </fieldset>
 
         <!-- 5. Replication/Data Recovery -->
         <fieldset>
             <legend>Replication/Data Recovery:</legend>
-            <label><input type="radio" name="replication" value="Oracle replication to Exadata through Data Guard available instantly"> Oracle replication to Exadata through Data Guard available instantly</label><br>
-            <label><input type="radio" name="replication" value="SQL Always ON Failover"> SQL Always ON Failover</label><br>
-            <label><input type="radio" name="replication" value="Snapshot"> Snapshot</label><br>
-            <label><input type="radio" name="replication" value="Other" id="replication-other"> Other</label><br>
+            <label><input type="checkbox" name="replication" value="Oracle replication to Exadata through Data Guard available instantly"> Oracle replication to Exadata through Data Guard available instantly</label><br>
+            <label><input type="checkbox" name="replication" value="SQL Always ON Failover"> SQL Always ON Failover</label><br>
+            <label><input type="checkbox" name="replication" value="Snapshot"> Snapshot</label><br>
+            <label><input type="checkbox" name="replication" value="Other" id="replication-other"> Other</label><br>
             <input type="text" id="replication-other-input" name="replicationOther" placeholder="Please specify..." style="display:none;">
         </fieldset>
 
         <!-- 6. Database Language -->
         <fieldset>
             <legend>Database Language:</legend>
-            <label><input type="radio" name="database-language" value="Oracle"> Oracle</label><br>
-            <label><input type="radio" name="database-language" value="SQL"> SQL</label><br>
-            <label><input type="radio" name="database-language" value="Other" id="database-language-other"> Other</label><br>
+            <label><input type="checkbox" name="database-language" value="Oracle"> Oracle</label><br>
+            <label><input type="checkbox" name="database-language" value="SQL"> SQL</label><br>
+            <label><input type="checkbox" name="database-language" value="Other" id="database-language-other"> Other</label><br>
             <input type="text" id="database-language-other-input" name="databaseLanguageOther" placeholder="Please specify..." style="display:none;">
         </fieldset>
 
